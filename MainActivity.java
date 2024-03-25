@@ -1,10 +1,8 @@
-package com.example.usebutton;
+package com.example.pro_sumin01;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.widget.Button;
 import android.view.View;
 import android.util.Log;
@@ -24,21 +22,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         resultTextView = findViewById(R.id.resultTextView);
 
-        button = findViewById(R.id.button);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "버튼 클릭");
-
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-
-                startActivity(intent);
-            }
-        });
     }
     public void onNumberButtonClick(View view) {
         if (isOperatorClicked) {
@@ -85,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
             }
             currentNumber = "";
             resultTextView.setText(String.valueOf(result));
+        }
+    }
+    // 잘못 적었을때 지우는 기능을 추가하시오
+    public void onBackspaceButtonClick(View view) {
+        if (!currentNumber.isEmpty()) {
+            currentNumber = currentNumber.substring(0, currentNumber.length() - 1);
+            resultTextView.setText(resultTextView.getText().toString().substring(0, resultTextView.getText().length() - 1));
         }
     }
 
