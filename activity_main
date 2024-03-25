@@ -6,19 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#9EF5F1F1"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -26,9 +17,9 @@
             android:id="@+id/resultTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:layout_marginBottom="16dp"
             android:gravity="end"
-            android:layout_marginBottom="16dp"/>
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,8 +29,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
-                android:onClick="onNumberButtonClick"/>
+                android:onClick="onNumberButtonClick"
+                android:text="1" />
 
             <!-- 숫자 버튼들 추가 -->
 
@@ -52,23 +43,127 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onNumberButtonClick"
+                android:text="3" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:onClick="onOperatorButtonClick"
                 android:text="+" />
 
             <!-- 연산자 버튼들 추가 -->
         </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="="
-            android:onClick="onEqualButtonClick"/>
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberButtonClick"
+                android:text="4" />
+
+            <!-- 숫자 버튼들 추가 -->
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberButtonClick"
+                android:text="5" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberButtonClick"
+                android:text="7" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperatorButtonClick"
+                android:text="-" />
+
+            <!-- 연산자 버튼들 추가 -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberButtonClick"
+                android:text="7" />
+
+            <!-- 숫자 버튼들 추가 -->
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberButtonClick"
+                android:text="9" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberButtonClick"
+                android:text="9" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperatorButtonClick"
+                android:text="*" />
+
+            <!-- 연산자 버튼들 추가 -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- 숫자 버튼들 추가 -->
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClearButtonClick"
+                android:text="C" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onNumberButtonClick"
+                android:text="0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onEqualButtonClick"
+                android:text="=" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onOperatorButtonClick"
+                android:text="/" />
+
+            <!-- 연산자 버튼들 추가 -->
+        </LinearLayout>
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="C"
-            android:onClick="onClearButtonClick"/>
+            android:onClick="onBackspaceButtonClick"
+            android:text="지우기" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
